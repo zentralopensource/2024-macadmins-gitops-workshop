@@ -50,21 +50,16 @@ We have stored the state resulting from this deployment in Zentral itself, so th
 So, let's setup a new Terraform working dir, based on the starter kit, and configure your Zentral instance as the remote state backend.
 
 > [!TIP]
-> Clone the startup kit repository into a new working directory on your machine.
+> Download a [ZIP archive the startup kit](https://github.com/zentralopensource/zentral-cloud-tf-starter-kit/archive/refs/heads/main.zip) repository. **Do not clone it**, since you will be creating a new repository.
+>
+>  Unzip it into a new working directory on your machine.
 > 
 > In the `provider.tf` file, replace the `// BACKEND PLACEHOLDER` with the **partial** configuration block at the bottom of the `starter_kit` state detail page in your Zentral instance.
 > 
-> Initialize your working directory by running the `terraform init` command at the bottom of the `starter_kit` state detail page in your Zentral instance. You can use the suggested environment variables by exporting them beforehand, or you can substitute the acual values.
+> Initialize your working directory by running the `terraform init` command at the bottom of the `starter_kit` state detail page in your Zentral instance. **Do not forget the extra backend options to complement the partial configuration**. 
+> 
+> You can use the suggested environment variables (`$ZTL_USERNAME` and `$ZTL_API_TOKEN`) by exporting them in your shell beforehand, or you can substitute the acual values directly.
 > 
 > Run `terraform apply`. You should see 0 changes.
 
-Now that you have the current Terraform configuration, and the corresponding remote state, you can start collaborating with your team mate.
-
-> [!TIP]
-> Create a GitUp repository, and push the working dir to it.
-> 
-> Ask your team mate to clone the repository.
-> 
-> Finally, your team mate can also initialize the working dir.
-
-This setup with the remote state is fine, but it is not enough for proper collaboration. In the next section, we will [use GitHub actions to deploy our changes](./4_github_actions.md).
+Now that you have the current Terraform configuration, and the corresponding remote state, let's [setup a GitHub repository to start collaborating with your team mate](./4_github_repository_and_actions.md).
