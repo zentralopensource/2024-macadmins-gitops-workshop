@@ -71,9 +71,9 @@ To get started, enroll your test device or VM in Zentral. To speed things up, we
 
 MDM enrollments in Zentral connects a SCEP configuration, a Push certificate and a blueprint. A blueprint is a selection of _Artifacts_ (Configuration profiles, Enterprise applications) and other settings (FileVault, Recovery Lock, …).
 
-_An enrollment It is usually configured with an Identity Provider (Realm in Zentral) for authentication during Automatic Device Enrollment or OTA Enrollment. With authentication, a public link to the OTA profile is available, and the end users must authenticate before they can download the profile._
+An enrollment It is usually configured with an Identity Provider (Realm in Zentral) for authentication during Automatic Device Enrollment or OTA Enrollment. With authentication, a public link to the OTA profile is available, and the end users must authenticate before they can download the profile.
 
-> [!TIP]
+> [!TIP]
 > Use the download button to download the profile.
 > 
 > Install the profile in your test device or your VM:

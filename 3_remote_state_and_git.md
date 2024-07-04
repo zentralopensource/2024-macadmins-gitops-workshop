@@ -6,7 +6,7 @@ As you may have noticed, when multiple users apply similar Terraform resources t
 
 The main reason is that with the simple setup we have used so far, the Terraform state is not shared. It is stored locally in a file called `terraform.tfstate`
 
-> [!TIP
+> [!TIP]
 > Have a look in your working directory. Peek inside the file (JSON data structure) to see the resources you have created.
 
 When used without a remote backend for the state, Terraform only sees what has changed locally. If something is absent from the local state, it will try to create it, even if it has already been created somewhere else.
