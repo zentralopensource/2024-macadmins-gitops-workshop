@@ -6,4 +6,4 @@ This repository contains the material for the 2024 MacAdmins GitOps workshop.
 
 1. [Discover your Zentral instance](./1_discover_zentral.md)
 2. [GitOps introduction](./2_gitops_intro.md)
-3. [Remot state and Git](./3_remote_state_and_git.md)
+3. [Remote state and Git](./3_remote_state_and_git.md)
