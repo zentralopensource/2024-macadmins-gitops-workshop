@@ -60,7 +60,7 @@ Zentral exports metrics about its different components and the modules for [Prom
 
 Finally, we have also a [Grafana](https://grafana.com/) instance in our Cloud tenants. This is the perfect tool to build custom dashboards bringing together the metrics collected with Prometheus and the events stored in Elasticsearch.
 
-### Enroll your test device or WM
+### Enroll your test device or VM
 
 To get started, enroll your test device or VM in Zentral. To speed things up, we have already signed the MDM APNS certificate and we have configured an OTA enrollment.
 
