@@ -1,6 +1,4 @@
-# GitOps
-
-## Introduction to GitOps
+# Introduction to GitOps
 
 As [GitLab](https://about.gitlab.com/topics/gitops/) defines it, GitOps is:
 
@@ -144,3 +142,11 @@ terraform apply
 That's it.
 
 You can now try to change the tag, add a color, maybe create a second tag. The reference for the tag resource is [here](https://registry.terraform.io/providers/zentralopensource/zentral/latest/docs/resources/tag). The color is expressed like in HTML, for example `ff0000`.
+
+You can cleanup the resources you have created in your Zentral instance with the following command:
+
+```
+terraform destroy
+```
+
+Now that you have been introduced to Terraform, let's facilitate the collaboration with your workshop colleague by [using some remote state and git](./3_remote_state_and_git.md).
