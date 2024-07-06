@@ -74,7 +74,7 @@ jobs:
       - name: Create String Output
         id: tf-plan-string
         run: |
-          TERRAFORM_PLAN=$(terraform show -no-color ${{ env.TF_PLAN_FILENAME }})
+          TERRAFORM_PLAN=$(terraform show -no-color tfplan)
           NEWLINE=$'\n'
           [ ${#TERRAFORM_PLAN} -gt 32768 ] && TERRAFORM_PLAN="${TERRAFORM_PLAN:0:32750}$NEWLINE--- TRUNCATED ---"
 
