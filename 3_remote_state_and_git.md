@@ -55,11 +55,38 @@ So, let's setup a new Terraform working dir, based on the starter kit, and confi
 >  Unzip it into a new working directory on your machine.
 > 
 > In the `provider.tf` file, replace the `// BACKEND PLACEHOLDER` with the **partial** configuration block at the bottom of the `starter_kit` state detail page in your Zentral instance.
+
+The backend is only **partially** configured. We did that to avoid writting secrets in the code. The `username` and `password` attributes are required, but will be set during the initialization of the working directory.
+
+Let's first setup the shell environment with some variables required to apply the configuration
+
+```bash
+export ZTL_USERNAME=your-username
+export ZTL_API_TOKEN=your-api-token
+export TF_VAR_fqdn="your-instance-name.zentral.cloud"
+export TF_VAR_api_token=$ZTL_API_TOKEN
+```
+
+The last two variables have a special prefix. Terraform recognizes them and uses them as values when planing the deployment.
+
+> [!TIP]
+> Have a look again in the `provider.tf` file and in the `variables.tf` file. You will see the definition of `api_token` and `fqdn` and how we use them.
+
+You might be wondering why we haven't used the `fqdn` variable when defining the backend. Well, it is not possible to have a dynamic backend configuration!
+
+> Initialize your working directory by running the `terraform init` command at the bottom of the `starter_kit` state detail page in your Zentral instance.
 > 
-> Initialize your working directory by running the `terraform init` command at the bottom of the `starter_kit` state detail page in your Zentral instance. **Do not forget the extra backend options to complement the partial configuration**. 
+> **Do not forget the extra backend options to complement the partial configuration**. 
+
+The remote backend is configured now. The [official Zentral terraform provider](https://registry.terraform.io/providers/zentralopensource/zentral/latest) has been downloaded too. This is the plugin that enables Terraform to talk to a Zentral instance. It translates the resources between the Zentral json format and the internal Terraform state representation. It also implements the Terraform CRUD operations using the Zentral API.
+
+> [!TIP]
 > 
-> You can use the suggested environment variables (`$ZTL_USERNAME` and `$ZTL_API_TOKEN`) by exporting them in your shell beforehand, or you can substitute the acual values directly.
-> 
-> Run `terraform apply`. You should see 0 changes.
+> Run `terraform plan`
+
+
+You should see `No changes`. The Terraform `starter_kit` state in Zentral, and the resource definitions in this working directory are in sync.
+
+If you run `terraform apply`, nothing will happen.
 
 Now that you have the current Terraform configuration, and the corresponding remote state, let's [setup a GitHub repository to start collaborating with your team mate](./4_github_repository_and_actions.md).
