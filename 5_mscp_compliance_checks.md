@@ -122,3 +122,9 @@ We want to import the generated TF resources into Zentral. We will use our Terra
 > 
 > Go to Zentral, open the _Munki > Script checks_ section and see the imported scripts.
 
+
+The Munki script checks in Zentral are run by Munki. In the _Munki > Configurations_ view on Zentral, you can see the default Munki configuration. If you open the detail view, you will see that the default _Script checks run interval_ is set to 86400 seconds or 24 hours.
+
+If you want to force a new run, open the inventory detail view of a machine, and in the action dropdown, click on "Force full sync" in the Munki section. On the device, open [Managed Software Center](munki://updates), go to the _Updates_ section and click on _Check Again_.
+
+Now that we have the compliance checks in place, let's try to [fix some of the issues with the MDM](./6_mdm.md).
