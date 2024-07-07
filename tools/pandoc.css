@@ -1,5 +1,11 @@
 body {
   font-family: Helvetica,Sans-Serif;
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 h1 {

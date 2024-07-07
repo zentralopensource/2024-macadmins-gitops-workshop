@@ -10,6 +10,7 @@ import csv
 import os.path
 import subprocess
 import tempfile
+import unicodedata
 from urllib.parse import urlparse
 
 
@@ -23,16 +24,19 @@ def iter_instances(csv_source):
 
 def create_markdown(instance):
     url, password = instance
+    password = unicodedata.normalize('NFC', password)
     o = urlparse(url)
     slug = o.netloc.split(".", 1)[0]
     return slug, "\n".join((
         "# Welcome to the Zentral GitOps workshop!",
         "",
-        "## Zentral instance details",
+        "## Your Zentral instance:",
         "",
-        f" * URL: [{url}]({url})",
-        " * Username: support@zentral.com",
-        f" * Password: `{password}`",
+        f"**URL:** [{url}]({url})",
+        "",
+        "**Username:** support@zentral.com",
+        "",
+        f"**Password:** {password}",
         "",
     ))
 
@@ -48,7 +52,7 @@ def generate_first_login_pdf_file(instance, output_dir):
             "pandoc", mdfile.name,
             "--css", pandoc_css,
             "--pdf-engine", "wkhtmltopdf",
-            "-V", "papersize:Letter",
+            "-V", "papersize:A4",
             "-o", output_file],
             capture_output=True,
             check=True
