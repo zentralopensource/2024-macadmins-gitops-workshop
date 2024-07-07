@@ -10,3 +10,4 @@ This repository contains the material for the 2024 MacAdmins GitOps workshop.
 4. [GitHub repository & actions](./4_github_repository_and_actions.md)
 5. [mSCP compliance checks](./5_mscp_compliance_checks.md)
 6. [MDM](./6_mdm.md)
+7. [MDM](./7_munki.md)
