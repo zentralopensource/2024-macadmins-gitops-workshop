@@ -87,7 +87,6 @@ You an now make a PR and deploy this into Zentral.
 We have decided to keep the mobileconfig files in the repository in their original form. You can use your favorite tools to generate them. Terraform and the HCL configuration language and functions unlock really powerful possibilities.
 
 > [!TIP]
-
 > Open the [Santa configuration profile](https://github.com/zentralopensource/zentral-cloud-tf-starter-kit/blob/67f324a6cc712e0474ce8441ae6fcf3ad0cd97fa/mobileconfigs/santa.default-configuration.v1.mobileconfig#L28-L32) in your repo or on GitHub.
 >
 > Notice that we use `fqdn` and `secret` variables. The secrets are not included in the repository!
