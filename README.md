@@ -11,3 +11,4 @@ This repository contains the material for the 2024 MacAdmins GitOps workshop.
 5. [mSCP compliance checks](./5_mscp_compliance_checks.md)
 6. [MDM](./6_mdm.md)
 7. [Munki](./7_munki.md)
+8. [Osquery](./8_osquery.md)

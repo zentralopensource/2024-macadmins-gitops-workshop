@@ -200,5 +200,5 @@ We have already configured an Enterprise App in your instance: the bootstrap pac
 >
 > Find the artifact in the _MDM > Artifacts_ section in Zentral.
 
-This is it for the Zentral MDM configuration. Let's have a look at [Munki now](./7_munki.md).
+This is it for the Zentral MDM configuration. Let's have a look at [Munki](./7_munki.md) now.
 
