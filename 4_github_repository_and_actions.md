@@ -9,6 +9,8 @@ We are finally ready to put the Git into GitOps. First we need a GitHub reposito
 > Create a [GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
 >
 > Use the suggested commands to make your first commit in your latest Terraform working directory and push it to GitHub.
+>
+> To authenticate with GitHub, here is a [doc](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github).
 
 You then need to add your team mates as collaborators, so that they can work on the code, and have access to the repository variables and secrets.
 
