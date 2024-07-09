@@ -47,14 +47,14 @@ bundle install --binstubs --path mscp_gems
 You can then [generate a baseline](https://github.com/usnistgov/macos_security/wiki/Generate-a-Baseline), either automatically:
 
 ```
-./scripts/generate_baseline.py -k 800-53r5_moderate
+./scripts/generate_baseline.py -k cis_lvl1
 ```
 
 Or by [tailoring](https://github.com/usnistgov/macos_security/wiki/Tailoring) one:
 
 
 ```
-./scripts/generate_baseline.py -k 800-53r5_moderate -t
+./scripts/generate_baseline.py -k cis_lvl1 -t
 ```
 
 When tailoring a baseline, it is possible to change the default _Organization Defined Values_ or ODVs. The custome ODVs are written into the `custom/rules` folder.
