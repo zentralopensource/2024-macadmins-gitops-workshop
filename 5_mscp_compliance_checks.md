@@ -82,12 +82,12 @@ We can now run the tool to generate the Terraform resources for your mSCP baseli
 
 **You might need to customize the following command!**
 
-- Replace the `800-53r5_moderate.yaml` filename with the actual value
+- Replace the `cis_lvl1.yaml` filename with the actual value
 -  This commands works when launched from a folder containing the `zentral/` and `macos_security/` cloned repositories. You may have cloned them somewhere else in your environment.
 
 ```
 python3 zentral/zentral/core/compliance_checks/tools/mSCP/build_tf_script_checks.py \
-        ./macos_security/build/baselines/800-53r5_moderate.yaml \
+        ./macos_security/build/baselines/cis_lvl1.yaml \
         ./macos_security \
         --min-os-version 14 \
         --max-os-version 15 \
