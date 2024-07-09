@@ -73,7 +73,7 @@ You need to clone the repository, and install the python requirements.
 git clone https://github.com/zentralopensource/zentral.git
 
 # install the python requirements
-pip3 install -r zentral/core/compliance_checks/tools/mSCP/requirements.txt --user
+pip3 install -r zentral/zentral/core/compliance_checks/tools/mSCP/requirements.txt --user
 ```
 
 ### Generate the `.tf` file
