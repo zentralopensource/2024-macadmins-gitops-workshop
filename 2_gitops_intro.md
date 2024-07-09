@@ -45,7 +45,7 @@ With Zentral, we started with indempotent APIs to be able to push Santa rules an
 
 The tools to apply the changes would be very specific to our platform too, reducing the possibilities for knowledge transfer.
 
-So we looked at the systems already widly in used for IaC. In our organization use Terraform a lot for our own infrastructure, and to deploy Zentral on prem for some of our customers. That gave us an idea: What if we could use Terraform to manage the Zentral configuration?
+So we looked at the systems already widly in used for IaC. In our organization we use Terraform a lot for our own infrastructure, and to deploy Zentral on prem for some of our customers. That gave us an idea: What if we could use Terraform to manage the Zentral configuration?
 
 ### Why Terraform (or OpenTofu)?
 
