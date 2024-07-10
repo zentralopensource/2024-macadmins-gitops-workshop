@@ -27,9 +27,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: hashicorp/setup-terraform@v3
+      - name: Install latest terraform version
+        uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: "1.9.1"
+          # We do not want the terraform wrapper that is masking the terraform plan -detailed-exitcode.
+          terraform_wrapper: false
 
       # Initialize a new or existing Terraform working directory by creating initial files,
       # loading any remote state, downloading modules, etc.
@@ -128,9 +130,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: hashicorp/setup-terraform@v3
+      - name: Install latest terraform version
+        uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: "1.9.1"
+          # We do not want the terraform wrapper. Too much magic.
+          terraform_wrapper: false
 
       # Initialize a new or existing Terraform working directory by creating initial files,
       # loading any remote state, downloading modules, etc.
