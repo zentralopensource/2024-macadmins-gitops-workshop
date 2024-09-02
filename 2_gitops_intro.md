@@ -6,6 +6,8 @@ As [GitLab](https://about.gitlab.com/topics/gitops/) defines it, GitOps is:
 
 The same proven principles can be applied to device managemenent. We will use a GitOps workflow to automate the process of configuring devices. We will use configuration files stored as code, in a version control system, and deploy the configuration with CI/CD pipelines.
 
+_If you would like to learn or freshen up your skills with Git, you can use this [tutorial on branching with git](https://learngitbranching.js.org/)._  
+
 ### What are the benefits?
 
 There are many, but let's start with:
